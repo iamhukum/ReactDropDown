@@ -7,7 +7,7 @@ function Dropdown(props) {
 	const { clicked, list, handleClick } = props;
 	return (
 		<div className="dropdown">
-			<div className="select" onClick={handleClick}>
+			<div className="select" onMouseEnter={handleClick}>
 				<p>Select</p>
 				<AiOutlineDown />
 			</div>
