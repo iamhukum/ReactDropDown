@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Dropdown from "./dropdown/Dropdown";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+	constructor() {
+		super();
+		this.state = {
+			clicked: true,
+			list: ["Yes", "Probably not"],
+		};
+	}
+
+	handleClick = () => {
+		this.setState({ clicked: !this.state.clicked });
+	};
+
+	render() {
+		const { clicked, list } = this.state;
+		return (
+			<>
+				<Dropdown clicked={clicked} list={list} handleClick={this.handleClick} />
+			</>
+		);
+	}
 }
-
-export default App;
