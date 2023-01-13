@@ -4,6 +4,8 @@
 
 .dropdown {
 	width: 300px;
+	display: flex;
+	align-items: center;
 }
 
 .select {
@@ -16,4 +18,10 @@
 	user-select: none;
 	cursor: pointer;
 	background-color: var(--button-color);
+}
+
+@media screen and (max-width: 425px) {
+	.dropdown {
+		width: 240px;
+	}
 }
