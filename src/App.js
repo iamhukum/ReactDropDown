@@ -6,7 +6,7 @@ export default class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			clicked: true,
+			clicked: false,
 			list: ["Yes", "Probably not"],
 		};
 	}
